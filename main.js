@@ -49,7 +49,6 @@ const fallbackPosts = [
         }
 ];
 
-// Function to render a single video card
 function createVideoCard(post) {
         const article = document.createElement('article');
         article.className = 'video-container';
