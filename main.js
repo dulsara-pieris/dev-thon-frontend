@@ -16,7 +16,6 @@ links.forEach(link => {
 
 const videosContainer = document.querySelector('.videos');
 
-// Dummy fallback data
 const fallbackPosts = [
         {
                 id: 1,
