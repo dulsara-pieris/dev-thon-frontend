@@ -18,7 +18,7 @@ const videosContainer = document.querySelector('.videos');
 
 const fallbackPosts = [
         {
-                id: 1,
+                url: 1,
                 title: "Sample Video 1",
                 thumbnail: "https://unsplash.it/250/150?gravity=center",
                 channel_icon: "https://unsplash.it/36/36?gravity=center",
@@ -29,7 +29,7 @@ const fallbackPosts = [
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum ab voluptatem blanditiis esse iusto quaerat? At veritatis hic inventore ratione excepturi sint consequuntur dolorum nobis, recusandae quisquam earum tenetur."
         },
         {
-                id: 2,
+                url: 2,
                 title: "Sample Video 2",
                 thumbnail: "https://unsplash.it/250/150?gravity=center",
                 channel_icon: "https://unsplash.it/36/36?gravity=center",
@@ -40,7 +40,7 @@ const fallbackPosts = [
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum ab voluptatem blanditiis esse iusto quaerat? At veritatis hic inventore ratione excepturi sint consequuntur dolorum nobis, recusandae quisquam earum tenetur."
         },
         {
-                id: 3,
+                url: 3,
                 title: "Sample Video 3",
                 thumbnail: "https://unsplash.it/250/150?gravity=center",
                 channel_icon: "https://unsplash.it/36/36?gravity=center",
@@ -57,7 +57,7 @@ function createVideoCard(post) {
         article.className = 'video-container';
 
         article.innerHTML = `
-                <a href="/skill/${post.id}" class="thumbnail" data-duration="${post.duration}">
+                <a href="${post.url}" class="thumbnail" data-duration="${post.duration}">
                         <img src="${post.thumbnail}" class="thumbnail-image" alt="${post.title}">
                 </a>
                 <div class="video-bottom-section">
