@@ -102,6 +102,7 @@ header {
 .video-container {
         display: flex;
         gap: 1rem;
+        align-items: flex-start;
 }
 
 
@@ -109,7 +110,6 @@ header {
         flex-shrink: 0;
         width: 360px;
         height: 202px;
-
         position: relative;
         border-radius: 8px;
         overflow: hidden;
@@ -159,9 +159,7 @@ header {
 .video-details {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        gap: 0.3rem;
-        flex-grow: 1;
+        gap: 0.2rem;
 }
 
 
@@ -170,6 +168,7 @@ header {
         font-weight: bold;
         color: #fff;
         text-decoration: none;
+        line-height: 1.2rem;
 }
 
 .video-title:hover {
@@ -178,9 +177,8 @@ header {
 
 
 .video-channel-name {
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #c1c1c1;
+        font-size: 0.85rem;
+        color: #aaa;
         text-decoration: none;
 }
 
@@ -188,8 +186,9 @@ header {
         color: #fff;
 }
 
+
 .video-metadata {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: #aaa;
 }
 
@@ -199,4 +198,6 @@ header {
 
 .video-metadata p {
         margin-top: 4px;
+        line-height: 1.2rem;
+        color: #ccc;
 }
