@@ -1,3 +1,19 @@
+const slider = document.getElementById("slide-con");
+const links = document.querySelectorAll("a[data-target]");
+
+links.forEach(link => {
+        link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = link.getAttribute("data-target");
+
+                if (target === "login") {
+                        slider.style.transform = "translateX(-100vw)";
+                } else if (target === "signup") {
+                        slider.style.transform = "translateX(0)";
+                }
+        });
+});
+
 const videosContainer = document.querySelector('.videos');
 
 const fallbackPosts = [
@@ -38,16 +54,16 @@ function createVideoCard(post) {
         article.className = 'video-container';
 
         article.innerHTML = `
+                <a href="/skill/${post.id}" class="thumbnail" data-duration="${post.duration}">
+                        <img src="${post.thumbnail}" class="thumbnail-image" alt="${post.title}">
+                </a>
                 <div class="video-bottom-section">
-                        <a href="/skill/${post.id}" class="thumbnail" data-duration="${post.duration}">
-                                <img src="${post.thumbnail}" class="thumbnail-image" alt="${post.title}">
+                        <a href="#">
+                                <img src="${post.channel_icon}" alt="" class="channel-icon">
                         </a>
                         <div class="video-details">
                                 <a href="/skill/${post.id}" class="video-title">${post.title}</a>
-                                <div class="video-channel">
-                                        <img src="${post.channel_icon}" alt="" class="channel-icon">
-                                        <a href="#" class="video-channel-name">${post.channel_name}</a>
-                                </div>
+                                <a href="#" class="video-channel-name">${post.channel_name}</a>
                                 <div class="video-metadata">
                                         <span>${post.views} views</span> · 
                                         <span>${post.uploaded}</span>
@@ -83,5 +99,4 @@ function renderVideos(posts) {
 
         videosContainer.appendChild(section);
 }
-
 loadVideos();
