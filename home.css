@@ -60,7 +60,7 @@ body {
         min-width: 250px;
         min-height: 150px;
         background-color: #aaa;
-        border-radius: 3vw;
+        border-radius: 1.5vw;
 }
 .channel-icon {
         margin-right: .75rem;
@@ -192,4 +192,13 @@ header {
 }
 .search-btn:hover {
         background-color: #7b7b7bf0;
+}
+
+
+
+
+iframe{
+        padding-left: 4%;
+        width: 70vw;
+        height: 70vh;
 }
