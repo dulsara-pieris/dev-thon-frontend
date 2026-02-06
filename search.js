@@ -25,7 +25,8 @@ const fallbackPosts = [
                 channel_name: "Test Channel",
                 views: "10K",
                 uploaded: "2 days ago",
-                duration: "5:12"
+                duration: "5:12",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum ab voluptatem blanditiis esse iusto quaerat? At veritatis hic inventore ratione excepturi sint consequuntur dolorum nobis, recusandae quisquam earum tenetur."
         },
         {
                 id: 2,
@@ -35,7 +36,8 @@ const fallbackPosts = [
                 channel_name: "Demo Channel",
                 views: "23K",
                 uploaded: "1 week ago",
-                duration: "12:45"
+                duration: "12:45",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum ab voluptatem blanditiis esse iusto quaerat? At veritatis hic inventore ratione excepturi sint consequuntur dolorum nobis, recusandae quisquam earum tenetur."
         },
         {
                 id: 3,
@@ -45,7 +47,8 @@ const fallbackPosts = [
                 channel_name: "Example Channel",
                 views: "5K",
                 uploaded: "3 weeks ago",
-                duration: "8:30"
+                duration: "8:30",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum ab voluptatem blanditiis esse iusto quaerat? At veritatis hic inventore ratione excepturi sint consequuntur dolorum nobis, recusandae quisquam earum tenetur."
         }
 ];
 
@@ -67,6 +70,7 @@ function createVideoCard(post) {
                                 <div class="video-metadata">
                                         <span>${post.views} views</span> · 
                                         <span>${post.uploaded}</span>
+                                        <p>${post.description}</p>
                                 </div>
                         </div>
                 </div>
