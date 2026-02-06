@@ -2,13 +2,15 @@
         box-sizing: border-box;
         font-family: 'Courier New', Courier, monospace;
 }
+html {
+        background: linear-gradient(to right, #1f1f1f, #2f2f2f);
+}
 
 body {
         margin: 0;
-                background-image: url('jpg.jpg');
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
 }
 
 .video-container {
@@ -32,7 +34,7 @@ body {
 .thumbnail {
         position: relative;
         display: flex;
-        border-radius: 3vw;
+        border-radius: 1.5vw;
         border: 1px solid #eeeeee8d;
         transition: border 250ms;
 
