@@ -282,6 +282,23 @@ iframe {
 .user-content button:hover {
         transform: translateY(-2px);
 }
+.channel-banner {
+        background-image: url('../images/bg.jpg');
+        height: 20vh;
+        min-height: 200px;
+        border-bottom: 2px solid #ccc;
+}
+.grid1 {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+}
 .avatar {
+        position: relative;
+        left: 4%;
         width: 100px;
+}
+.grid1 h1 {
+        position: relative;
+        left: 4vw;
 }
