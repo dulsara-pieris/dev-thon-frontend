@@ -60,7 +60,7 @@ function createHistoryCard(video) {
 
                         <div class="video-details">
                                 <span class="video-title">${video.title}</span>
-                                <a href="#" class="video-channel-name">${video.channel_name}</a>
+                                <a href="${post.creator}" classclass="video-channel-name">${video.channel_name}</a>
 
                                 <div class="video-metadata">
                                         <span>Watched ${video.watched_at}</span> ·

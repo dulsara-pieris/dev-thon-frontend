@@ -18,6 +18,7 @@ const videosContainer = document.querySelector('.videos');
 
 const fallbackPosts = [
         {
+                id: 1,
                 url: 1,
                 title: "Sample Video 1",
                 thumbnail: "https://unsplash.it/250/150?gravity=center",
@@ -62,8 +63,8 @@ function createVideoCard(post) {
                                 <img src="${post.channel_icon}" alt="" class="channel-icon">
                         </a>
                         <div class="video-details">
-                                <a href="${post.id}" class="video-title">${post.title}</a>
-                                <a href="#" class="video-channel-name">${post.channel_name}</a>
+                                <a href="${post.url}" class="video-title">${post.title}</a>
+                                <a href="${post.creator}" class="video-channel-name">${post.channel_name}</a>
                                 <div class="video-metadata">
                                         <span>${post.views} views</span> · 
                                         <span>${post.uploaded}</span>

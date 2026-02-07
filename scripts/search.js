@@ -66,7 +66,7 @@ function createVideoCard(post) {
                         </a>
                         <div class="video-details">
                                 <span lass="video-title">${post.title}</span>
-                                <a href="#" class="video-channel-name">${post.channel_name}</a>
+                                <a href="${post.creator}" class="video-channel-name">${post.channel_name}</a>
                                 <div class="video-metadata">
                                         <span>${post.views} views</span> · 
                                         <span>${post.uploaded}</span>
