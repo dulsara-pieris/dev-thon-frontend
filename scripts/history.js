@@ -54,7 +54,7 @@ function createHistoryCard(video) {
                 </a>
 
                 <div class="video-bottom-section">
-                        <a href="#">
+                        <a href="${post.creator}">
                                 <img src="${video.channel_icon}" class="channel-icon">
                         </a>
 

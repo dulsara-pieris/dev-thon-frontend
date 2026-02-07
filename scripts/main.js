@@ -59,7 +59,7 @@ function createVideoCard(post) {
                         <img src="${post.thumbnail}" class="thumbnail-image" alt="${post.title}">
                 </a>
                 <div class="video-bottom-section">
-                        <a href="#">
+                        <a href="${post.creator}">
                                 <img src="${post.channel_icon}" alt="" class="channel-icon">
                         </a>
                         <div class="video-details">
@@ -78,7 +78,7 @@ function createVideoCard(post) {
 
 async function loadVideos() {
         try {
-                const res = await fetch('http://localhost:5000/api/posts');
+                const res = await fetch('http://localhost:5000/api/recommended');
                 if (!res.ok) throw new Error('Backend error');
                 const posts = await res.json();
                 renderVideos(posts);
