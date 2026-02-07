@@ -19,12 +19,16 @@
                 <div class="page" id="register">
                         <div class="signup">
                                 <h2>Sign Up</h2>
-                                <form>
-                                        <input type="text" placeholder="Username" required>
-                                        <input type="email" placeholder="Email" required>
-                                        <input type="password" placeholder="Password" required>
+                                <form method="POST" action="/auth">
+                                        <input type="hidden" name="mode" value="signup">
+
+                                        <input type="text" name="uname" placeholder="Username" required>
+                                        <input type="email" name="email" placeholder="Email" required>
+                                        <input type="password" name="password" placeholder="Password" required>
+                                        <p>{{error}}</p>
                                         <button type="submit">Sign Up</button>
                                 </form>
+
                                 <a href="#login" data-target="login">Go to Login →</a>
                         </div>
                 </div>
@@ -34,12 +38,17 @@
                 <div class="page" id="login">
                         <div class="signup">
                                 <h2>Login</h2>
-                                <form>
-                                        <input type="email" placeholder="Email" required>
-                                        <input type="password" placeholder="Password" required>
+                                        <form method="POST" action="/auth">
+                                        <input type="hidden" name="mode" value="login">
+
+                                        <input type="email" name="email" placeholder="Email" required>
+                                        <input type="password" name="password" placeholder="Password" required>
+
                                         <button type="submit">Login</button>
-                                </form>
+                                        </form>
                                 <a href="#register" data-target="signup">← Back to Sign Up</a>
+                                <br>
+                                <p>{{info}}</p>
                         </div>
                 </div>
         </div>
