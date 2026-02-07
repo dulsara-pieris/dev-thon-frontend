@@ -4,7 +4,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>home</title>
+        <title>Home with Popup</title>
         <link rel="stylesheet" href="styles/home.css">
 </head>
 
@@ -13,26 +13,20 @@
                 <header>
                         <div class="search-bar">
                                 <form class="search-bar">
-                                        <input type="text" class="search-input" tpe="search" placeholder="search"
+                                        <input type="text" class="search-input" type="search" placeholder="search"
                                                 aria-label="search">
                                         <button type="submit" class="search-btn">
-                                                <img src="/images/icons/search.svg" alt="">
+                                                <img src="/images/icons/search.svg" alt="search">
                                         </button>
                                 </form>
                         </div>
                         <div class="meanue-icons">
-                                <a href="">
-                                        <img src="" alt="">
-                                </a>
-                                <a href="">
-                                        <img src="" alt="">
-                                </a>
-                                <a href="">
-                                        <img src="" alt="">
-                                </a>
-                                <a href="">
-                                        <img src="" alt="">
-                                </a>
+                                <div class="open-user">
+                                        <img src="images/icons/user.svg" alt="user">
+                                </div>
+                                <a href="#"><img src="" alt=""></a>
+                                <a href="#"><img src="" alt=""></a>
+                                <a href="#"><img src="" alt=""></a>
                         </div>
                 </header>
                 <section class="category-section">
@@ -48,9 +42,21 @@
                         <button class="categoty">Category 9</button>
                 </section>
         </div>
+
         <div class="videos">
                 <section class="videos-section"></section>
         </div>
+
+        <div class="user-overlay">
+                <div class="user-content">
+                        <button class="close-user">&times;</button>
+                        <h2>Welcome Exlorer!</h2>
+                        <p>Hi: <span>User</span></p>
+                        <p>Skill points: <span>333</span></p>
+                        <button>Histoy</button> <button>Video history</button>
+                </div>
+        </div>
+        <script src="scripts/pops.js"></script>
         <script src="scripts/main.js"></script>
 </body>
 
