@@ -8,6 +8,10 @@
         font-family: 'display';
         src: url('../fonts/display/ChangaOne-Regular.ttf');
 }
+@font-face {
+        font-family: 'patua';
+        src: url(../fonts/patua/PatuaOne-Regular.ttf);
+}
 
 body {
         margin: 0;
@@ -153,10 +157,9 @@ body {
 
 .welcome p {
         text-align: center;
-        font-family: 'zombie', 'Courier New', Courier, monospace;
+        font-family: 'patua', 'Courier New', Courier, monospace;
         font-size: 3.7vw;
-        color: #414141;
-        text-shadow: 2px 2px 1px #00e1ff;
+        color: #868686;
 
 }
 
@@ -166,8 +169,8 @@ body {
         width: 20vw;
         height: 7vh;
         font-size: 2vw;
-        font-family: 'brush', 'Courier New', Courier, monospace;
-        background-color: #00e1ff50;
+        font-family: 'display', 'Courier New', Courier, monospace;
+        background-color: #00e1ffb6;
         border-radius: 15px;
         box-shadow: 4px 4px 4px #838f00;
 }
@@ -199,4 +202,24 @@ body {
                 width: 70vh;
                 height: 70vh;
         }
+}
+
+#world {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+}
+
+.skill-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #111;
+        color: white;
+        padding: 2rem;
+        border-radius: 18px;
+        box-shadow: 0 0 40px #0ff;
+        display: none;
+        z-index: 3;
 }
