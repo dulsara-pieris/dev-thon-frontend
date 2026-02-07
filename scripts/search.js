@@ -65,7 +65,7 @@ function createVideoCard(post) {
                                 <img src="${post.channel_icon}" alt="" class="channel-icon">
                         </a>
                         <div class="video-details">
-                                <a href="/skill/${post.id}" class="video-title">${post.title}</a>
+                                <span lass="video-title">${post.title}</span>
                                 <a href="#" class="video-channel-name">${post.channel_name}</a>
                                 <div class="video-metadata">
                                         <span>${post.views} views</span> · 
