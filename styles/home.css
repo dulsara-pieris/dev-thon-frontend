@@ -35,6 +35,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
+	transition-duration: 500ms;
+	border-radius: 20px;
 }
 
 .videos-section {
@@ -44,17 +46,12 @@ body {
 	padding: 3rem 0;
 	margin: 0 1.5rem;
 	border-top: 4px solid #ccc;
-	transition: border 800ms;
-	transition: transform 10s;
-	transition: scale 10s;
 }
 
 .video-container:hover {
-	background-color: #ffffff0d;
-	border-radius: 20px;
-	border: 1px solid #767676;
-	scale: 1.025;
 	transform: translateY(-10px);
+	background-color: #ffffff0d;
+	scale: 1.03;
 }
 
 .videos-section:first-child {

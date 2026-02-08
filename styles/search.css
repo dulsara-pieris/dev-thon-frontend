@@ -99,9 +99,13 @@ header {
 	display: flex;
 	gap: 1rem;
 	align-items: flex-start;
+	transition-duration: 500ms;
 }
+
 .video-container:hover {
+	transform: translateY(-10px);
 	background-color: #ffffff0d;
+	scale: 1.03;
 }
 
 .thumbnail {
