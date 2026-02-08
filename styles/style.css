@@ -179,6 +179,7 @@ body {
 }
 
 .welcome button {
+	z-index: 999;
 	position: relative;
 	left: 40vw;
 	width: 20vw;
