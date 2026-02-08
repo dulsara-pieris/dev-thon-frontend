@@ -203,21 +203,136 @@ header {
 }
 
 
-.history-progress {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: rgba(0, 0, 0, 0.4);
-}
-
-.history-progress-bar {
-        height: 100%;
-        background: #00ff99;
-}
-
 .video-metadata span {
         color: #aaa;
         font-size: 13px;
+}
+
+.user-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        pointer-events: auto;
+}
+
+.user-content {
+        background-color: #1f1f1f;
+        color: #fff;
+        padding: 2rem 3rem;
+        border-radius: 15px;
+        max-width: 400px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        border: 2px solid #ccc;
+        pointer-events: auto;
+}
+
+.close-user {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+}
+
+.open-user img {
+        cursor: pointer;
+        position: relative;
+        top: .5rem;
+        scale: 1.25;
+}
+
+.user-content button {
+        margin-top: 1rem;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+}
+
+.user-content button:hover {
+        transform: translateY(-2px);
+}
+
+
+
+
+
+
+.history-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+}
+
+
+.history-item {
+        display: flex;
+        gap: 16px;
+        padding: 12px;
+        border-radius: 10px;
+        transition: background 0.2s ease;
+}
+
+.history-item:hover {
+        background: rgba(255, 255, 255, 0.05);
+}
+
+
+.history-thumbnail {
+        width: 360px;
+        height: 202px;
+        border-radius: 10px;
+        overflow: hidden;
+}
+
+.history-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+
+.history-details {
+        display: flex;
+        align-items: center;
+}
+
+.video-title {
+        font-size: 1rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 6px;
+}
+
+.video-channel-name {
+        font-size: 0.9rem;
+        opacity: 0.8;
+}
+
+.video-metadata {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-top: 4px;
+}
+
+.history-watched {
+        font-size: 0.8rem;
+        color: #4da3ff;
+        margin-top: 8px;
 }

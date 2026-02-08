@@ -1,16 +1,17 @@
-const videosContainer = document.querySelector(".videos");
+const videosContainer = document.querySelector('.videos');
 
-
-const fallbackHistory = [
+const fallbackPosts = [
         {
                 url: 1,
                 title: "Sample Video 1",
                 thumbnail: "https://unsplash.it/250/150?gravity=center",
                 channel_icon: "https://unsplash.it/36/36?gravity=center",
                 channel_name: "Test Channel",
-                watched_at: "2 hours ago",
-                progress: 65,
-                duration: "5:12"
+                views: "10K",
+                uploaded: "2 days ago",
+                duration: "5:12",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                watched: "Watched 1 hour ago"
         },
         {
                 url: 2,
@@ -18,38 +19,39 @@ const fallbackHistory = [
                 thumbnail: "https://unsplash.it/250/150?gravity=center",
                 channel_icon: "https://unsplash.it/36/36?gravity=center",
                 channel_name: "Demo Channel",
-                watched_at: "Yesterday",
-                progress: 100,
-                duration: "12:45"
+                views: "23K",
+                uploaded: "1 week ago",
+                duration: "12:45",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                watched: "Watched yesterday"
         }
 ];
 
-
-function createHistoryCard(video) {
-        const article = document.createElement("article");
-        article.className = "video-container history-item";
+function createVideoCard(post) {
+        const article = document.createElement('article');
+        article.className = 'video-container history-item';
 
         article.innerHTML = `
-                <a href="${video.url}" class="thumbnail">
-                        <img src="${video.thumbnail}" class="thumbnail-image" alt="${video.title}">
-                        <div class="history-progress">
-                                <div class="history-progress-bar" style="width:${video.progress}%"></div>
-                        </div>
+                <a href="${post.url}" class="thumbnail history-thumbnail" data-duration="${post.duration}">
+                        <img src="${post.thumbnail}" class="thumbnail-image" alt="${post.title}">
                 </a>
 
-                <div class="video-bottom-section">
-                        <a href="${post.creator}">
-                                <img src="${video.channel_icon}" class="channel-icon">
-                        </a>
-
+                <div class="video-bottom-section history-details">
                         <div class="video-details">
-                                <span class="video-title">${video.title}</span>
-                                <a href="${post.creator}" classclass="video-channel-name">${video.channel_name}</a>
+                                <span class="video-title">${post.title}</span>
+
+                                <a href="${post.creator || '#'}" class="video-channel-name">
+                                        ${post.channel_name}
+                                </a>
 
                                 <div class="video-metadata">
-                                        <span>Watched ${video.watched_at}</span> ·
-                                        <span>${video.progress}% watched</span>
+                                        <span>${post.views} views</span> · 
+                                        <span>${post.uploaded}</span>
                                 </div>
+
+                                <p class="history-watched">
+                                        ${post.watched || 'Watched recently'}
+                                </p>
                         </div>
                 </div>
         `;
@@ -57,31 +59,29 @@ function createHistoryCard(video) {
         return article;
 }
 
-
-async function loadHistory() {
+async function loadVideos() {
         try {
-                const res = await fetch("http://localhost:5000/api/history");
-                if (!res.ok) throw new Error("Backend error");
-                const history = await res.json();
-                renderHistory(history);
+                const res = await fetch('http://localhost:5000/api/posts');
+                if (!res.ok) throw new Error('Backend error');
+                const posts = await res.json();
+                renderVideos(posts);
         } catch (err) {
-                console.warn("Using fallback history:", err);
-                renderHistory(fallbackHistory);
+                console.warn('Backend not available, using fallback data:', err);
+                renderVideos(fallbackPosts);
         }
 }
 
+function renderVideos(posts) {
+        videosContainer.innerHTML = '';
+        const section = document.createElement('section');
+        section.className = 'videos-section history-section';
 
-function renderHistory(videos) {
-        videosContainer.innerHTML = "";
-
-        const section = document.createElement("section");
-        section.className = "videos-section history-section";
-
-        videos.forEach(video => {
-                section.appendChild(createHistoryCard(video));
+        posts.forEach(post => {
+                const videoCard = createVideoCard(post);
+                section.appendChild(videoCard);
         });
 
         videosContainer.appendChild(section);
 }
 
-loadHistory();
+loadVideos();
