@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="styles/home.css" />
+		<title>Home with Popup</title>
+		<link rel="stylesheet" href="../static/search.css" />
 	</head>
 
-	<body style="overflow: hidden">
+	<body>
 		<div class="catogories">
 			<header>
 				<div class="search-bar">
@@ -21,45 +21,36 @@
 						/>
 						<button type="submit" class="search-btn">
 							<img
-								src="/images/icons/search.svg"
-								alt=""
+								src="../static/images/icons/search.svg"
+								alt="search"
 							/>
 						</button>
 					</form>
 				</div>
+				<div class="meanue-icons">
+					<div class="open-user">
+						<img src="../static/images/icons/user.svg" alt="user" />
+					</div>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+				</div>
 			</header>
 		</div>
-		<div class="play-con">
-			<div class="row">
-				<div id="video-container">
-					<iframe
-						src="https://www.youtube.com/embed/4ykAepVkG5Y"
-						title="Create A Website Like YouTube Using HTML CSS JS | YouTube Clone Website Design Step By Step"
-						frameborder="0"
-						allow="
-							accelerometer;
-							autoplay;
-							clipboard-write;
-							encrypted-media;
-							gyroscope;
-							picture-in-picture;
-							web-share;
-						"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen
-					></iframe>
-				</div>
-			</div>
-			<div class="right-sidebar"></div>
+
+		<div class="videos">
+			<section class="videos-section"></section>
 		</div>
+
 		<div class="user-overlay">
 			<div class="user-content">
 				<button class="close-user">&times;</button>
 				<h2>Welcome Exlorer!</h2>
 				<p>Hi: <span>{{user_name}}</span></p>
-				<img src="{{profile_pic}}" alt="" />
 				<a href="history.html"><button>Video history</button></a>
 			</div>
 		</div>
+		<script src="scripts/pops.js"></script>
+		<script src="scripts/search.js"></script>
 	</body>
 </html>
