@@ -10,7 +10,7 @@
 
 @font-face {
 	font-family: "patua";
-	src: url('fonts/patua/PatuaOne-Regular.ttf');
+	src: url("fonts/patua/PatuaOne-Regular.ttf");
 }
 
 *,
@@ -347,4 +347,29 @@ iframe {
 	font-size: 125%;
 	font-family: "display", "Courier New", Courier, monospace;
 	font-size: 125%;
+}
+.meanue-icons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 10px;
+	padding: 5px;
+	overflow-x: auto;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.meanue-icons a {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	min-width: 24px;
+}
+
+.meanue-icons img {
+	display: block;
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
 }
