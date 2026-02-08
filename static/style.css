@@ -1,16 +1,16 @@
 @font-face {
 	font-family: "brush";
-	src: url("../fonts/brushflare/ITBrushflareDEMO-Regular.otf");
+	src: url("fonts/brushflare/ITBrushflareDEMO-Regular.otf");
 }
 
 @font-face {
 	font-family: "display";
-	src: url("../fonts/display/ChangaOne-Regular.ttf");
+	src: url("fonts/display/ChangaOne-Regular.ttf");
 }
 
 @font-face {
 	font-family: "patua";
-	src: url(../fonts/patua/PatuaOne-Regular.ttf);
+	src: url('fonts/patua/PatuaOne-Regular.ttf');
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 		"Segoe UI",
 		Arial,
 		sans-serif;
-	background-image: url("../images/bg.jpg");
+	background-image: url("images/bg.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;

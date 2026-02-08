@@ -1,16 +1,16 @@
 @font-face {
 	font-family: "brush";
-	src: url("../fonts/brushflare/ITBrushflareDEMO-Regular.otf");
+	src: url("fonts/brushflare/ITBrushflareDEMO-Regular.otf");
 }
 
 @font-face {
 	font-family: "display";
-	src: url("../fonts/display/ChangaOne-Regular.ttf");
+	src: url("fonts/display/ChangaOne-Regular.ttf");
 }
 
 @font-face {
 	font-family: "patua";
-	src: url(../fonts/patua/PatuaOne-Regular.ttf);
+	src: url('fonts/patua/PatuaOne-Regular.ttf');
 }
 
 *,
@@ -303,7 +303,7 @@ iframe {
 }
 
 .channel-banner {
-	background-image: url("../images/bg.jpg");
+	background-image: url("images/bg.jpg");
 	height: 20vh;
 	min-height: 200px;
 	border-bottom: 2px solid #ccc;
