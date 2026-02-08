@@ -1,60 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home with Popup</title>
+		<link rel="stylesheet" href="styles/home.css" />
+	</head>
 
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home with Popup</title>
-        <link rel="stylesheet" href="styles/home.css">
-</head>
+	<body>
+		<div class="catogories">
+			<header>
+				<div class="search-bar">
+					<form class="search-bar">
+						<input
+							type="text"
+							class="search-input"
+							type="search"
+							placeholder="search"
+							aria-label="search"
+						/>
+						<button type="submit" class="search-btn">
+							<img
+								src="/images/icons/search.svg"
+								alt="search"
+							/>
+						</button>
+					</form>
+				</div>
+				<div class="meanue-icons">
+					<div class="open-user">
+						<img src="images/icons/user.svg" alt="user" />
+					</div>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+				</div>
+			</header>
+		</div>
+		<div class="channel-banner">
+			<div class="grid1">
+				<img
+					src="{{avatar}}"
+					alt="avatar"
+					onerror="
+						this.onerror = null;
+						this.src = 'images/icons/user.svg';
+					"
+					class="avatar"
+				/>
+				<h1>{{channel-name}}</h1>
+			</div>
 
-<body>
-        <div class="catogories">
-                <header>
-                        <div class="search-bar">
-                                <form class="search-bar">
-                                        <input type="text" class="search-input" type="search" placeholder="search"
-                                                aria-label="search">
-                                        <button type="submit" class="search-btn">
-                                                <img src="/images/icons/search.svg" alt="search">
-                                        </button>
-                                </form>
-                        </div>
-                        <div class="meanue-icons">
-                                <div class="open-user">
-                                        <img src="images/icons/user.svg" alt="user">
-                                </div>
-                                <a href="#"><img src="" alt=""></a>
-                                <a href="#"><img src="" alt=""></a>
-                                <a href="#"><img src="" alt=""></a>
-                        </div>
-                </header>
-        </div>
-        <div class="channel-banner">
+			<span>{{subscriber-count}}</span>
+			<button class="sub">{{subscrbe}}</button>
+		</div>
+		<div class="videos">
+			<section class="videos-section"></section>
+		</div>
 
-                <div class="grid1">
-                <img src="{{avatar}}" alt="avatar" onerror="this.onerror=null; this.src='images/icons/user.svg';" class="avatar">
-                <h1>{{channel-name}}</h1>
-                </div>
-
-                <span>{{subscriber-count}}</span>
-                <button class="sub">{{subscrbe}}</button>
-        </div>
-        <div class="videos">
-                <section class="videos-section"></section>
-        </div>
-
-        <div class="user-overlay">
-                <div class="user-content">
-                        <button class="close-user">&times;</button>
-                        <h2>Welcome Exlorer!</h2>
-                        <p>Hi: <span>User</span></p>
-                        <p>Skill points: <span>333</span></p>
-                        <a href="history.html"><button>Video history</button></a>
-                </div>
-        </div>
-        <script src="scripts/pops.js"></script>
-        <script src="scripts/channel.js"></script>
-</body>
-
+		<div class="user-overlay">
+			<div class="user-content">
+				<button class="close-user">&times;</button>
+				<h2>Welcome Exlorer!</h2>
+				<p>Hi: <span>User</span></p>
+				<p>Skill points: <span>333</span></p>
+				<a href="history.html"><button>Video history</button></a>
+			</div>
+		</div>
+		<script src="scripts/pops.js"></script>
+		<script src="scripts/channel.js"></script>
+	</body>
 </html>

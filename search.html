@@ -1,50 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home with Popup</title>
+		<link rel="stylesheet" href="styles/search.css" />
+	</head>
 
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home with Popup</title>
-        <link rel="stylesheet" href="styles/search.css">
-</head>
+	<body>
+		<div class="catogories">
+			<header>
+				<div class="search-bar">
+					<form class="search-bar">
+						<input
+							type="text"
+							class="search-input"
+							type="search"
+							placeholder="search"
+							aria-label="search"
+						/>
+						<button type="submit" class="search-btn">
+							<img
+								src="/images/icons/search.svg"
+								alt="search"
+							/>
+						</button>
+					</form>
+				</div>
+				<div class="meanue-icons">
+					<div class="open-user">
+						<img src="images/icons/user.svg" alt="user" />
+					</div>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+				</div>
+			</header>
+		</div>
 
-<body>
-        <div class="catogories">
-                <header>
-                        <div class="search-bar">
-                                <form class="search-bar">
-                                        <input type="text" class="search-input" type="search" placeholder="search"
-                                                aria-label="search">
-                                        <button type="submit" class="search-btn">
-                                                <img src="/images/icons/search.svg" alt="search">
-                                        </button>
-                                </form>
-                        </div>
-                        <div class="meanue-icons">
-                                <div class="open-user">
-                                        <img src="images/icons/user.svg" alt="user">
-                                </div>
-                                <a href="#"><img src="" alt=""></a>
-                                <a href="#"><img src="" alt=""></a>
-                                <a href="#"><img src="" alt=""></a>
-                        </div>
-                </header>
-        </div>
+		<div class="videos">
+			<section class="videos-section"></section>
+		</div>
 
-        <div class="videos">
-                <section class="videos-section"></section>
-        </div>
-
-        <div class="user-overlay">
-                <div class="user-content">
-                        <button class="close-user">&times;</button>
-                        <h2>Welcome Exlorer!</h2>
-                        <p>Hi: <span>{{user_name}}</span></p>
-                        <a href="history.html"><button>Video history</button></a>
-                </div>
-        </div>
-        <script src="scripts/pops.js"></script>
-        <script src="scripts/search.js"></script>
-</body>
-
+		<div class="user-overlay">
+			<div class="user-content">
+				<button class="close-user">&times;</button>
+				<h2>Welcome Exlorer!</h2>
+				<p>Hi: <span>{{user_name}}</span></p>
+				<a href="history.html"><button>Video history</button></a>
+			</div>
+		</div>
+		<script src="scripts/pops.js"></script>
+		<script src="scripts/search.js"></script>
+	</body>
 </html>
