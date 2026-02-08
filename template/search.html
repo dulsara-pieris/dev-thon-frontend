@@ -10,21 +10,43 @@
 	<body>
 		<div class="catogories">
 			<header>
+				<div class="search-bar">
+					<form class="search-bar">
+						<input
+							type="text"
+							class="search-input"
+							type="search"
+							placeholder="search"
+							aria-label="search"
+						/>
+						<button type="submit" class="search-btn">
+							<img
+								src="../static/images/icons/search.svg"
+								alt="search"
+							/>
+						</button>
+					</form>
+				</div>
 				<div class="meanue-icons">
-					<div class="open-user">
+					<a href="#" class="open-user">
 						<img
 							src="../static/images/icons/user.svg"
 							alt="user"
-							onerror="
-								this.onerror = null;
-								this.src =
-									'../static/images/icons/user.svg';
-							"
 						/>
-					</div>
-					<a href="#"><img src="" alt="" /></a>
-					<a href="#"><img src="" alt="" /></a>
-					<a href="#"><img src="" alt="" /></a>
+					</a>
+					<a href="/logout">
+						<img
+							src="../static/images/icons/logout.svg"
+							alt="logout"
+						/>
+					</a>
+
+					<a href="search.html">
+						<img
+							src="../static/images/icons/search.svg"
+							alt="settings"
+						/>
+					</a>
 				</div>
 			</header>
 		</div>

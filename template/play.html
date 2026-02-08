@@ -4,48 +4,54 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="../static/home.css" />
+		<link rel="stylesheet" href="../static/home.css">
 	</head>
 
 	<body style="overflow: hidden">
 		<div class="catogories">
 			<header>
-				<div class="search-bar">
-					<form class="search-bar">
-						<input
-							type="text"
-							class="search-input"
-							type="search"
-							placeholder="search"
-							aria-label="search"
+				<div class="meanue-icons">
+					<a href="#" class="open-user">
+						<img
+							src="../static/images/icons/user.svg"
+							alt="user"
 						/>
-						<button type="submit" class="search-btn">
-							<img
-								src="../static/images/icons/search.svg"
-								alt=""
-								onerror="
-									this.onerror = null;
-									this.src =
-										'../static/images/icons/user.svg';
-								"
-							/>
-						</button>
-					</form>
+					</a>
+					<a href="/logout">
+						<img
+							src="../static/images/icons/logout.svg"
+							alt="logout"
+						/>
+					</a>
+
+					<a href="search.html">
+						<img
+							src="../static/images/icons/search.svg"
+							alt="settings"
+						/>
+					</a>
 				</div>
 			</header>
 		</div>
 		<div class="play-con">
 			<div class="row">
-				<div class="meanue-icons">
-					<div class="open-user">
-						<img
-							src="../static/images/icons/user.svg"
-							alt="user"
-						/>
-					</div>
-					<a href="#"><img src="" alt="" /></a>
-					<a href="#"><img src="" alt="" /></a>
-					<a href="#"><img src="" alt="" /></a>
+				<div id="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/4ykAepVkG5Y"
+						title="Create A Website Like YouTube Using HTML CSS JS | YouTube Clone Website Design Step By Step"
+						frameborder="0"
+						allow="
+							accelerometer;
+							autoplay;
+							clipboard-write;
+							encrypted-media;
+							gyroscope;
+							picture-in-picture;
+							web-share;
+						"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
 				</div>
 			</div>
 			<div class="right-sidebar"></div>

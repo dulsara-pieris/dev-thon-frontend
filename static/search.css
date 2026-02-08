@@ -25,6 +25,7 @@ header {
 	align-items: center;
 	padding: 1rem 2rem;
 	border-bottom: 1px solid #444;
+	height: 60px;
 }
 
 .search-bar {
@@ -244,7 +245,6 @@ header {
 .open-user img {
 	cursor: pointer;
 	position: relative;
-	top: 0.5rem;
 	scale: 1.25;
 }
 
@@ -323,4 +323,21 @@ header {
 	font-size: 0.8rem;
 	color: #4da3ff;
 	margin-top: 8px;
+}
+
+.meanue-icons {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.meanue-icons a {
+	display: flex;
+	align-items: center;
+}
+
+.meanue-icons img {
+	width: 24px;
+	height: 24px;
+	display: block;
 }
