@@ -1,3 +1,20 @@
+@font-face {
+        font-family: 'brush';
+        src: url('../fonts/brushflare/ITBrushflareDEMO-Regular.otf');
+}
+
+
+@font-face {
+        font-family: 'display';
+        src: url('../fonts/display/ChangaOne-Regular.ttf');
+}
+
+@font-face {
+        font-family: 'patua';
+        src: url(../fonts/patua/PatuaOne-Regular.ttf);
+}
+
+
 *,
 *::after,
 *::before {
@@ -287,6 +304,7 @@ iframe {
         height: 20vh;
         min-height: 200px;
         border-bottom: 2px solid #ccc;
+        font-family: 'display', 'Courier New', Courier, monospace;
 }
 .grid1 {
         display: flex;
@@ -301,4 +319,25 @@ iframe {
 .grid1 h1 {
         position: relative;
         left: 4vw;
+        font-family: 'display', 'Courier New', Courier, monospace;
+}
+
+.channel-banner span {
+        position: relative;
+        left: 10%;
+        font-family: 'display', 'Courier New', Courier, monospace;
+        font-size: 125%;
+        padding: 20px;
+}
+.channel-banner button {
+        position: relative;
+        left: 10%;
+        background-color: #00e1ffb6;
+        border-radius: 15px;
+        border: 2px solid #ccc;
+        width: 150px;
+        height: 35px;
+        font-size: 125%;
+        font-family: 'display', 'Courier New', Courier, monospace;
+        font-size: 125%;
 }
