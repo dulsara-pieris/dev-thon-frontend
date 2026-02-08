@@ -13,8 +13,12 @@
 				<div class="meanue-icons">
 					<a href="#" class="open-user">
 						<img
-							src="../static/images/icons/user.svg"
-							alt="user"
+							src="{{prof_pic}}"
+							onerror="
+								this.onerror = null;
+								this.src =
+									'../static/images/icons/user.svg';
+							"
 						/>
 					</a>
 					<a href="/logout">
