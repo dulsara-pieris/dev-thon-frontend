@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="../static/home.css">
+		<link rel="stylesheet" href="../static/home.css" />
 	</head>
 
 	<body style="overflow: hidden">
@@ -23,6 +23,11 @@
 							<img
 								src="../static/images/icons/search.svg"
 								alt=""
+								onerror="
+									this.onerror = null;
+									this.src =
+										'../static/images/icons/user.svg';
+								"
 							/>
 						</button>
 					</form>
@@ -31,23 +36,16 @@
 		</div>
 		<div class="play-con">
 			<div class="row">
-				<div id="video-container">
-					<iframe
-						src="https://www.youtube.com/embed/4ykAepVkG5Y"
-						title="Create A Website Like YouTube Using HTML CSS JS | YouTube Clone Website Design Step By Step"
-						frameborder="0"
-						allow="
-							accelerometer;
-							autoplay;
-							clipboard-write;
-							encrypted-media;
-							gyroscope;
-							picture-in-picture;
-							web-share;
-						"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen
-					></iframe>
+				<div class="meanue-icons">
+					<div class="open-user">
+						<img
+							src="../static/images/icons/user.svg"
+							alt="user"
+						/>
+					</div>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
 				</div>
 			</div>
 			<div class="right-sidebar"></div>
