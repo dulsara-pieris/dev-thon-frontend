@@ -7,3 +7,5 @@ fixed added icon elements and fixed
 removed the search bar algined the icons properly
 
 added image_pic and gave fallback
+
+added upload page
