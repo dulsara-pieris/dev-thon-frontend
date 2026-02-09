@@ -133,7 +133,23 @@ body {
 .video-channel-name {
 	color: #c1c1c1;
 }
+a {
+	color: #ccc;
+	text-decoration: none;
+}
 
+a:hover {
+	color: #ccc;
+}
+
+a:active,
+a:focus {
+	color: #ccc;
+}
+
+a:visited {
+	color: #ccc;
+}
 .catogories {
 	padding: 1rem 2rem;
 	border-top: 1px solid #999;
