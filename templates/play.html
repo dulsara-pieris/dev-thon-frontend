@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Watch</title>
+
+		<link rel="stylesheet" href="../static/home.css" />
+
+		<style></style>
+	</head>
+
+	<body class="play">
+		<header>
+			<div class="meanue-icons">
+				<a href="#" class="open-user">
+					<img
+						src="{{prof_pic}}"
+						onerror="
+							this.onerror = null;
+							this.src =
+								'../static/images/icons/user.svg';
+						"
+					/>
+				</a>
+				<a href="/logout">
+					<img src="../static/images/icons/logout.svg" alt="logout" />
+				</a>
+
+				<a href="search.html">
+					<img
+						src="../static/images/icons/search.svg"
+						alt="settings"
+					/>
+				</a>
+			</div>
+		</header>
+
+		<main class="watch">
+			<section>
+				<div class="player">
+					<iframe src="{{video_link}}" allowfullscreen></iframe>
+				</div>
+
+				<div class="title">{{title}}</div>
+				<div class="stats">{{viwes}}</div>
+
+				<div class="actions">
+					<button>👍 {{like}}</button>
+					<button>👎 {{unlike}}</button>
+					<button>Share</button>
+				</div>
+
+				<div class="channel">
+					<div class="channel-left">
+						<img
+							src="{{channel_icon}}"
+							onerror="
+								this.onerror = null;
+								this.src =
+									'../static/images/icons/user.svg';
+							"
+						/>
+						<div>
+							<div>{{channel}}</div>
+							<div class="stats">{{subscribers}}</div>
+						</div>
+					</div>
+
+					<button class="subscribe">{{subscribe}}</button>
+				</div>
+			</section>
+
+			<aside class="sidebar"></aside>
+
+			<div class="user-overlay">
+				<div class="user-content">
+					<button class="close-user">&times;</button>
+					<h2>Welcome Exlorer!</h2>
+					<p>Hi: <span>{{user_name}}</span></p>
+					<a href="history.html"><button>Video history</button></a>
+				</div>
+			</div>
+		</main>
+
+		<script src="../static/pops.js"></script>
+		<script src="../static/play_sidebar.js"></script>
+	</body>
+</html>
