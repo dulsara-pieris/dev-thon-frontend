@@ -69,6 +69,17 @@
 
 					<button class="subscribe">{{subscribe}}</button>
 				</div>
+
+				<div class="comment-input-wrapper">
+					<input
+						type="text"
+						id="new-comment"
+						placeholder="Add a public comment..."
+					/>
+					<button id="add-comment-btn">Comment</button>
+				</div>
+
+				<div class="comment-section" id="comment-section"></div>
 			</section>
 
 			<aside class="sidebar"></aside>
@@ -76,13 +87,14 @@
 			<div class="user-overlay">
 				<div class="user-content">
 					<button class="close-user">&times;</button>
-					<h2>Welcome Exlorer!</h2>
+					<h2>Welcome Explorer!</h2>
 					<p>Hi: <span>{{user_name}}</span></p>
 					<a href="history.html"><button>Video history</button></a>
 				</div>
 			</div>
 		</main>
 
+		<script src="../static/comment.js"></script>
 		<script src="../static/pops.js"></script>
 		<script src="../static/play_sidebar.js"></script>
 	</body>
